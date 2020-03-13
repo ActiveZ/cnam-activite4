@@ -18,4 +18,9 @@ public class Velo extends Vehicule implements DeuxRoues {
     public void changerPneuArriere() {
         System.out.println("J'ai changé le pneu arrière de mon vélo");
     }
+
+    @Override
+    public void seGarer() {
+
+    }
 }
