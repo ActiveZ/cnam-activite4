@@ -1,15 +1,15 @@
 package Validation4;
 
 public class Voiture extends VehiculeMotorise {
+    public Voiture(String modele) {
+        this.modele = modele;
+    }
 
     /**
      *
      * @param distance: distance parcourue en km
      */
     public void rouler(int distance) {
-        if (distance * moteur.conso > moteur.carburant) {
-            System.out.println("Vous n'avez pas assez de carburant pour parcourir " + distance + " km !");
-        }
+        moteur.utiliserM(distance);
     }
-
 }

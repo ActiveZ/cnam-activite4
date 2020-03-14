@@ -2,25 +2,31 @@ package Validation4;
 
 public class Velo extends Vehicule implements DeuxRoues {
 
-    @Override
-    protected void demarrer() {}
+    public Velo(String modele) {
+        this.modele = modele;
+    }
 
     @Override
-    protected void arreter() {}
+    protected void demarrer() {
+        System.out.println("Je pédale sur mon " + modele);
+    }
+
+    @Override
+    protected void arreter() {
+        System.out.println("Mon " + modele + " s'arrête");
+    }
 
 
     @Override
     public void changerPneuAvant() {
-        System.out.println("J'ai changé le pneu avant de mon vélo");
+        System.out.println("J'ai changé le pneu avant de mon " + modele);
     }
 
     @Override
     public void changerPneuArriere() {
-        System.out.println("J'ai changé le pneu arrière de mon vélo");
+        System.out.println("J'ai changé le pneu arrière de mon " + modele);
     }
 
-    @Override
-    public void seGarer() {
-
-    }
+//    @Override
+//    public void seGarer() {}
 }

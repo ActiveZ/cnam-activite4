@@ -5,8 +5,8 @@ public class launch {
 
     Menu menu = new Menu();
 
-    menu.initialisation();
-
+    //menu.initialisation();
+    menu.jouer();
 
     }
 }

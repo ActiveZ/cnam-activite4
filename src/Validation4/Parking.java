@@ -1,35 +1,35 @@
 package Validation4;
 
-public class Parking extends Vehicule {
-    int nbPlaces, dispo;
+public class Parking {
+    int nbPlaces2Roues, dispo;
 
-    public Parking(int nbPlaces) {
-        this.nbPlaces = nbPlaces;
-        this.dispo = nbPlaces;
+    public Parking(int nbPlaces2Roues) {
+        this.nbPlaces2Roues = nbPlaces2Roues;
+        this.dispo = nbPlaces2Roues;
     }
 
     public void garer(Vehicule vehicule) {
-        if (!(vehicule instanceof DeuxRoues)) { System.out.println("Ce parking est réservé aux deux-roues !");}
-        else {
+        if (vehicule instanceof DeuxRoues) {
             if (dispo > 0) {
-                System.out.println("Bienvenue, vous pouvez vous garer, il reste " + dispo +
-                        (dispo == 1 ? " place disponible" : " places disponibles"));
+                System.out.println("Bienvenue " + vehicule.modele + ", vous pouvez vous garer, il reste " + dispo +
+                        (dispo == 1 ? " place disponible" : " places disponibles") + " dans la zone 2 roues");
                 dispo--;
             } else {
-                System.out.println("Désolé, le parking est complet");
+                System.out.println("Désolé " + vehicule.modele + ", le parking 2 roues est complet");
             }
-        }
+        } else {
+            System.out.println(vehicule.modele + " se gare");}
     }
 
     public void liberer(Vehicule vehicule) {
-            System.out.println("Merci de votre visite, à bientot !");
+            System.out.println("Merci de votre visite, " + vehicule.modele + ".  A bientôt !");
             dispo++;
         }
 
-
-    @Override
-    protected void demarrer() {}
-
-    @Override
-    protected void arreter() {}
+//
+//    @Override
+//    protected void demarrer() {}
+//
+//    @Override
+//    protected void arreter() {}
 }
