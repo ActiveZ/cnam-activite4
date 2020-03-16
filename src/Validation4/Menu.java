@@ -23,7 +23,7 @@ public class Menu {
         private Velo velo2 = new Velo("VTT");
 
         // création du réparateur
-        private Reparateur reparateur = new Reparateur("Alfred");
+        private Reparateur reparateur = new Reparateur("Mario");
     //}
 
     public void jouer() {
@@ -33,6 +33,12 @@ public class Menu {
     voiture1.rouler(1000);
 
     voiture1.arreter();
+
+    moto1.changerPneuArriere();
+    reparateur.reparerRoueArriere(moto1);
+    parking.garer(moto2);
+    parking.garer(moto1);
+    parking.garer(voiture1);
 
     }
 }

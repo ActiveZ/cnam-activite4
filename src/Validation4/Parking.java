@@ -11,7 +11,7 @@ public class Parking {
     public void garer(Vehicule vehicule) {
         if (vehicule instanceof DeuxRoues) {
             if (dispo > 0) {
-                System.out.println("Bienvenue " + vehicule.modele + ", vous pouvez vous garer, il reste " + dispo +
+                System.out.println("Bienvenue " + vehicule.modele + ", vous pouvez vous garer, il y a " + dispo +
                         (dispo == 1 ? " place disponible" : " places disponibles") + " dans la zone 2 roues");
                 dispo--;
             } else {
@@ -25,11 +25,4 @@ public class Parking {
             System.out.println("Merci de votre visite, " + vehicule.modele + ".  A bientôt !");
             dispo++;
         }
-
-//
-//    @Override
-//    protected void demarrer() {}
-//
-//    @Override
-//    protected void arreter() {}
 }

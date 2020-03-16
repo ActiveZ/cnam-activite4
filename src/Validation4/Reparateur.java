@@ -1,23 +1,27 @@
 package Validation4;
 
-public class Reparateur implements DeuxRoues {
+public class Reparateur {
     private String nom;
 
     public Reparateur(String nom) {
         this.nom = nom;
     }
 
-    @Override
-    public void changerPneuAvant() { System.out.println(nom + " a réparé la roue avant !");}
 
-    @Override
-    public void changerPneuArriere() { System.out.println(nom + " a réparé la roue arrière !");}
-
-    public void reparerRoueAvant() {
-        changerPneuAvant();
+    public void reparerRoueAvant(Vehicule vehicule) {
+        if (vehicule instanceof DeuxRoues) {
+            System.out.println(nom + " a réparé la roue avant de ma " + vehicule.modele);
+        } else {
+            System.out.println("Désolé, " + nom + " ne répare que les deux-roues.");
+        }
     }
 
-    public void reparerRoueArriere() {
-        changerPneuArriere();
+    public void reparerRoueArriere(Vehicule vehicule) {
+        if (vehicule instanceof DeuxRoues) {
+            System.out.println(nom + " a réparé la roue arrière de ma " + vehicule.modele);
+        } else {
+            System.out.println("Désolé, " + nom + " ne répare que les deux-roues.");
+        }
     }
+
 }
