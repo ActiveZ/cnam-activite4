@@ -7,4 +7,8 @@ public abstract class Vehicule {
     protected abstract void demarrer();
 
     protected abstract void arreter();
+
+    public String getModele(){
+        return modele;
+    }
 }

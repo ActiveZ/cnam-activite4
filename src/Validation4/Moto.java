@@ -24,6 +24,9 @@ public class Moto extends VehiculeMotorise implements DeuxRoues {
         System.out.println("J'ai changé le pneu arrière de ma " + modele);
     }
 
-    @Override
-    public void seGarer() {}
+
+    public void seGarer(Parking parking) {
+        parking.garer(this);
+    }
+
 }

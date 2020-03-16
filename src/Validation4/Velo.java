@@ -27,6 +27,8 @@ public class Velo extends Vehicule implements DeuxRoues {
         System.out.println("J'ai changé le pneu arrière de mon " + modele);
     }
 
-    @Override
-    public void seGarer() {}
+
+    public void seGarer(Parking parking) {
+        parking.garer(this);
+    }
 }

@@ -16,9 +16,9 @@ public class Reparateur {
         }
     }
 
-    public void reparerRoueArriere(Vehicule vehicule) {
-        if (vehicule instanceof DeuxRoues) {
-            System.out.println(nom + " a réparé la roue arrière de ma " + vehicule.modele);
+    public void reparerRoueArriere(DeuxRoues dr) {
+        if (dr instanceof DeuxRoues) {
+            System.out.println(nom + " a réparé la roue arrière de ma " + dr.getModele());
         } else {
             System.out.println("Désolé, " + nom + " ne répare que les deux-roues.");
         }

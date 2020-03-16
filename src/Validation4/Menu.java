@@ -39,6 +39,7 @@ public class Menu {
     parking.garer(moto2);
     parking.garer(moto1);
     parking.garer(voiture1);
+    moto1.seGarer(parking);
 
     }
 }
