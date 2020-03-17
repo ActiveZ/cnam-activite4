@@ -9,7 +9,5 @@ public class Voiture extends VehiculeMotorise {
      *
      * @param distance: distance parcourue en km
      */
-    public void rouler(int distance) {
-        moteur.utiliserM(distance);
-    }
+    public void rouler(int distance) { moteur.utiliserM(distance); }
 }
